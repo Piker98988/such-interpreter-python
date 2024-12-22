@@ -1,7 +1,7 @@
 from classes import *
 import re
 
-
+# FIXME Rewrite according to the new guidelines; It won't work until then
 class Interpreter(object):
     @staticmethod
     def interpret(filepath: str) -> None:
