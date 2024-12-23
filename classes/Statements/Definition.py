@@ -2,17 +2,25 @@
 from typing import Type
 
 from classes.Types.DataType import DataType
+from classes.Types.NullType import NULL
 
 
 class Definition(object):
-    def __init__(self, datatype, name, value):
-        if datatype is not Type[DataType]:
-            raise ValueError(f"Datatype {datatype} not supported")
-        if type(value) is not Type[DataType]:
-            raise TypeError(f"Value {value} is not of type {datatype}")
+    def __init__(self, datatype: Type[DataType], name, value: DataType):
+        if not issubclass(datatype, DataType):
+            raise TypeError(f"Invalid type: {datatype}")
+
         self.datatype = datatype
         self.name = name
-        self.value = value
+        if datatype is not NULL:
+            self.value = datatype(value)
+        else:
+            self.value = None
 
     def __str__(self) -> str:
-        return f"{self.datatype} {self.name} = {self.value}"
+        return f"definition: {self.datatype.__name__} {self.name} = {self.value}"
+
+    @classmethod
+    def __repr__(cls) -> str:
+        return f"class: {cls.__name__}"
+

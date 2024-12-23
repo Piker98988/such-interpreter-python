@@ -1,7 +1,7 @@
 """Base class for any statement in such."""
 from typing import Type
 
-from ..Types.DataType import DataType
+from classes.Types.DataType import DataType
 
 
 class Statement(object):

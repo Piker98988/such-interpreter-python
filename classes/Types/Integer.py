@@ -1,10 +1,13 @@
 """Integer type in such."""
-from DataType import DataType
+from classes.Types.DataType import DataType
 
 
 class INTEGER(DataType):
     def __init__(self, value: int):
-        if type(value) is not int:
-            raise ValueError("INT type must be an integer")
+        super().__init__(INTEGER, self._tryToParseValue(value))
 
-        super().__init__(INTEGER, value)
+    def _tryToParseValue(self, value: int):
+        try:
+            return int(value)
+        except ValueError:
+            raise ValueError(f"INT type must be an integer: {value}")

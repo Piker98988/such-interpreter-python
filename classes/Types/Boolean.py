@@ -4,9 +4,14 @@ from classes.Types.DataType import DataType
 
 class BOOLEAN(DataType):
     def __init__(self, value: bool):
-        if value:
-            super().__init__("BOO", True)
-        elif not value:
-            super().__init__("BOO", False)
-        else:
-            raise TypeError("BOOLEAN type must be true or false")
+        super().__init__(BOOLEAN, self._tryToParseValue(value))
+
+
+    def _tryToParseValue(self, value) -> bool:
+        if value == "true" or value:
+            return True
+        elif value == "false" or not value:
+            return False
+
+        raise TypeError("BOO type must be true or false")
+

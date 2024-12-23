@@ -1,13 +1,11 @@
-#! such.
+RELH{RELH} device;
 
-KYV{KYV} device;
-
-KYV{STR} device::martin-mia1;
+RELH{STR} device::martin-mia1;
 STR host = "martin-mia1";
 STR path = "/sdcard/";
 STR user = "mu";
 
-KYV{KYV} tasks;
+RELH{RELH} tasks;
 
 // This is a line comment
 
@@ -19,15 +17,13 @@ multi-line
 comment
 -->
 
-KYV{LIS} tasks::CopyToDevice;
+RELH{VECH} tasks::CopyToDevice;
 
-LIS{STR/BOO} tasks::CopyToDevice::0;
+VECH{STR/BOO} tasks::CopyToDevice::0;
 STR source = "~/Dokumente/Karten/Routen";
 STR destination = "Android/data/net.osmand/files/tracks/Routen";
 BOO delete = true;
 
-LIS{STR/NU?} tasks::CopyToDevice::1;
+VECH{STR/NU?} tasks::CopyToDevice::1;
 STR source = "~/Dokumente/Hauptliste/Hauptliste.kdbx";
 NU? destination = ""; // The empty str will be parsed as NULL or None
-
-

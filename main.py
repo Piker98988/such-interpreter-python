@@ -12,15 +12,15 @@ def main():
     * 3. Once divided into statements, let's start parsing the statements and associating them.
     * 4. After parsing
     """
-    fullFile: str = "foo.such"
-    reducedFile: str = "bar.such"
+    fullFilePath: str = "./data/such/foo.such"
+    reducedFilePath: str = "./data/such/bar.such"
 
-    print(f"Reading from {reducedFile}...:")
-    print(f"\n=============================\n```such\n{Interpreter.interpret(reducedFile)}\n```")
+    print(f"Reading from {reducedFilePath}...:")
+    print(f"\n=============================\n```such\n{Interpreter.interpret(reducedFilePath)}\n```")
 
-    # ! Comments, which present themselves in this file, have not been added support yet. Expect errors.
-    print(f"Reading from {fullFile}...:")
-    print(f"\n=============================\n```such\n{Interpreter.interpret(fullFile)}\n```\n\n")
+    # ! Comments and headers, which are present in this file, have not been given support yet. Expect errors.
+    print(f"Reading from {fullFilePath}...:")
+    print(f"\n=============================\n```such\n{Interpreter.interpret(fullFilePath)}\n```\n\n")
 
 
 if __name__ == '__main__':
