@@ -1,5 +1,5 @@
 """Null type in such."""
-from classes.Types.DataType import DataType
+from utils.Types.DataType import DataType
 
 
 class NULL(DataType):
@@ -8,7 +8,7 @@ class NULL(DataType):
 
     def _tryToParseValue(self, value):
         interpreted_as_null = [
-            "",
+            '""',
             "null",
             "none",
         ]

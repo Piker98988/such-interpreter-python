@@ -1,5 +1,5 @@
 """String type in such."""
-from classes.Types.DataType import DataType
+from utils.Types.DataType import DataType
 
 
 class STRING(DataType):

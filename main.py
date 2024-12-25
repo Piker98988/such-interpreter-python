@@ -1,5 +1,5 @@
 """"Such." declarative JSON-derived language interpreter for Python."""
-from classes.Interpreter import Interpreter
+from utils.Interpreter import Interpreter
 
 def main():
     """
@@ -12,11 +12,16 @@ def main():
     * 3. Once divided into statements, let's start parsing the statements and associating them.
     * 4. After parsing
     """
+
     fullFilePath: str = "./data/such/foo.such"
+    semiFilePath: str = "./data/such/baz.such"
     reducedFilePath: str = "./data/such/bar.such"
 
     print(f"Reading from {reducedFilePath}...:")
     print(f"\n=============================\n```such\n{Interpreter.interpret(reducedFilePath)}\n```")
+
+    print(f"Reading from {semiFilePath}...:")
+    print(f"\n=============================\n```such\n{Interpreter.interpret(semiFilePath)}\n```")
 
     # ! Comments and headers, which are present in this file, have not been given support yet. Expect errors.
     print(f"Reading from {fullFilePath}...:")
