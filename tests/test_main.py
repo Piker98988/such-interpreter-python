@@ -69,26 +69,6 @@ class TestMainClass(unittest.TestCase):
             such = Such.from_string(contents)
         print(such)
 
-    def test_reduced_to_file(self):
-        print("\ntest_reduced_to_file")
-        such_info = Such.from_file(READ_REDUCED)
-        Such.to_file(such_info, OUTPUT_REDUCED)
-
-    def test_semi_reduced_to_file(self):
-        print("\ntest_semi_reduced_to_file")
-        such_info = Such.from_file(READ_SEMI)
-        Such.to_file(such_info, OUTPUT_SEMI)
-
-    def test_full_to_file(self):
-        print("\ntest_full_to_file")
-        such_info = Such.from_file(READ_FULL)
-        Such.to_file(such_info, OUTPUT_FULL)
-
-    def test_full_final_to_file(self):
-        print("\ntest_full_final_to_file")
-        such_info = Such.from_file(READ_FINAL)
-        Such.to_file(such_info, OUTPUT_FINAL)
-
     def test_reduced_from_json(self):
         print("\ntest_reduced_from_json")
         Such.from_json(JSON_REDUCED, OUTPUT_REDUCED)

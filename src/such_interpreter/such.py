@@ -95,9 +95,15 @@ class Such(object):
             raise FileNotFoundError("That is not a such file!")
 
         with open(json_file, "r") as f:
-            json_data = json.load(f)
+            json_data: list = json.load(f) # Filter the json data; The root object has to always be a dict: {...}
+
+        filered_json = {}
+        for obj in json_data:
+            for k, v in obj.items():
+                filered_json[k] = v
+
         with open(output_file, "w") as f:
-            f.write(Such._from_python_to_such(json_data, indent))
+            f.write(Such._from_python_to_such(filered_json, indent))
 
     @staticmethod
     def to_file(data: dict, file: str, indent: int=0):

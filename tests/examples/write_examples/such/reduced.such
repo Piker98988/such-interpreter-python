@@ -1,8 +1,71 @@
-BOO delete = true;
-STR host = "martin-mia1";
-STR path = "/sdcard/";
-STR user = "mu";
-STR source = "~/Dokumente/Hauptliste/Hauptliste.kdbx";
-NU? destination = none;
-INT times = 22;
+               RELH{BOO/STR/NU?/INT} employee0;
+      STR id = "6eae573f-7be8-4b11-a0f7-e56793a25472";
+      STR name = "Julie Patrick";
+      STR email = "sheajessica@example.org";
+      STR address = "68099 Joseph Dam Suite 024\nSouth Maryside, MH 82474";
+      STR phone_number = "630-688-3830";
+      STR job = "Passenger transport manager";
+      STR company = "Torres, Murphy and Wright";
+      STR birthdate = "2024-12-26";
+      STR created_at = "2024-02-17T08:29:13";
+      BOO is_active = false;
+      INT age = 60;
+      NU? car = none;
+ 
+RELH{BOO/STR/NU?/INT} employee1;
+      STR id = "3bf02acb-e88b-4ec7-ad5f-520ddd70bceb";
+      STR name = "Lisa Knight";
+      STR email = "dellis@example.net";
+      STR address = "USS Jones\nFPO AA 43737";
+      STR phone_number = "393-276-0826x398";
+      STR job = "Art therapist";
+      STR company = "Valencia Inc";
+      STR birthdate = "1943-07-05";
+      STR created_at = "2021-09-21T22:53:02";
+      BOO is_active = true;
+      INT age = 24;
+      NU? car = none;
+ 
+RELH{BOO/STR/NU?/INT} employee2;
+      STR id = "6f1bde3b-00bc-43cf-a128-05390d9afa75";
+      STR name = "Nicole Powers PhD";
+      STR email = "karen26@example.org";
+      STR address = "417 Chad Lakes Apt. 147\nJohnsonburgh, IA 54718";
+      STR phone_number = "(696)358-8797";
+      STR job = "Scientist, marine";
+      STR company = "Hampton PLC";
+      STR birthdate = "1914-05-31";
+      STR created_at = "2021-05-14T08:03:33";
+      BOO is_active = false;
+      INT age = 63;
+      NU? car = none;
+ 
+RELH{BOO/STR/NU?/INT} employee3;
+      STR id = "396806b1-6284-4428-a42c-d834efab34f0";
+      STR name = "Jacob Leblanc";
+      STR email = "eking@example.net";
+      STR address = "421 Brown Throughway\nStephenchester, WY 44598";
+      STR phone_number = "001-276-913-6839x925";
+      STR job = "Broadcast journalist";
+      STR company = "Fuentes Ltd";
+      STR birthdate = "1945-04-27";
+      STR created_at = "2023-11-30T06:37:15";
+      BOO is_active = false;
+      INT age = 37;
+      NU? car = none;
+ 
+RELH{BOO/STR/NU?/INT} employee4;
+      STR id = "46987e0c-11c8-4659-af56-d811fc8609d3";
+      STR name = "Clinton Schroeder";
+      STR email = "melinda81@example.net";
+      STR address = "749 Collins Key Suite 924\nNew Paultown, RI 72829";
+      STR phone_number = "672.277.6315x9497";
+      STR job = "Community development worker";
+      STR company = "Townsend-Shah";
+      STR birthdate = "1985-04-18";
+      STR created_at = "2022-10-08T15:38:36";
+      BOO is_active = true;
+      INT age = 56;
+      NU? car = none;
+ 
  
