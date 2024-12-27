@@ -1,0 +1,46 @@
+RELH{RELH} device;
+
+RELH{STR} device::martin-mia1;
+STR host = "martin-mia1";
+STR path = "/sdcard/";
+STR user = "mu";
+
+RELH{VECH} tasks;
+
+// This is a line comment
+
+<!--
+This
+is
+a
+multi-line
+comment
+-->
+
+VECH{RELH} tasks::CopyToDevice;
+
+RELH{STR/BOO} tasks::CopyToDevice::0;
+STR source = "~/Dokumente/Karten/Routen";
+STR destination = "Android/data/net.osmand/files/tracks/Routen";
+BOO delete = true;
+
+RELH{STR/NU?} tasks::CopyToDevice::1;
+STR source = "~/Dokumente/Hauptliste/Hauptliste.kdbx";
+NU? destination = ""; // The empty str will be parsed as NULL or None
+
+<!-- Given the expanse of this language, I will make several tests to see whether it works or not... -->
+
+// A vector with several definitions; they should be anonymous and only take the values instead of the keys
+VECH{STR/BOO/INT} asd;
+STR _ = "ASDADSAD";
+BOO _ = true;
+INT _ = 2345;
+
+// some heavy nesting with several null interpretations
+RELH{RELH} header1;
+RELH{RELH} header1::header2;
+RELH{RELH} header1::header2::header3;
+RELH{NU?} header1::header2::header3::header4;
+NU? definition1 = "";
+NU? definition2 = null;
+

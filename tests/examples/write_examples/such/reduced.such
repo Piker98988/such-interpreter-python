@@ -1,0 +1,8 @@
+BOO delete = true;
+STR host = "martin-mia1";
+STR path = "/sdcard/";
+STR user = "mu";
+STR source = "~/Dokumente/Hauptliste/Hauptliste.kdbx";
+NU? destination = none;
+INT times = 22;
+ 

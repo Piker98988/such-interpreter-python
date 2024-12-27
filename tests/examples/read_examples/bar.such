@@ -1,0 +1,23 @@
+BOO delete = true;
+
+STR host = "martin-mia1";
+STR path = "/sdcard/";
+STR user = "mu";
+    // Indented single line comment
+// Single line comment
+
+<!--
+Multi line comment here
+with several lines
+that's why it's called a
+multi line,
+because it has several lines
+-->
+
+STR source = "~/Dokumente/Karten/Routen";
+STR destination = "Android/data/net.osmand/files/tracks/Routen";
+BOO delete = true;
+
+STR source = "~/Dokumente/Hauptliste/Hauptliste.kdbx";
+NU? destination = "";
+INT times = 22;

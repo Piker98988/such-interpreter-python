@@ -1,5 +1,0 @@
-RELH{RELH} device;
-RELH{STR} device::martin-mia1;
-STR host = "martin-mia1";
-STR path = "/sdcard/";
-STR user = "mu";

@@ -1,0 +1,28 @@
+RELH{RELH} device;
+	RELH{STR} device::martin-mia1;
+		STR host = "martin-mia1";
+		STR path = "/sdcard/";
+		STR user = "mu";
+
+RELH{VECH} tasks;
+
+// This is a line comment
+
+<!--
+This
+is
+a
+multi-line
+comment
+-->
+
+VECH{RELH} tasks::CopyToDevice;
+
+RELH{STR/BOO} tasks::CopyToDevice::0;
+STR source = "~/Dokumente/Karten/Routen";
+STR destination = "Android/data/net.osmand/files/tracks/Routen";
+BOO delete = true;
+
+RELH{STR/NU?} tasks::CopyToDevice::1;
+STR source = "~/Dokumente/Hauptliste/Hauptliste.kdbx";
+NU? destination = ""; // The empty str will be parsed as NULL or None
